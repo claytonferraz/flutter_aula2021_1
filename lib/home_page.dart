@@ -13,14 +13,21 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     // podemos usar Scaffold ou material
+    var container = Container(
+      height: 250,
+      width: 250,
+      color: Colors.red,
+      //testando filho
+      child: Container(
+        height: 250,
+        width: 250,
+        color: Colors.black87,
+      ),
+    );
     return Scaffold(
       appBar: AppBar(title: Text('Aula Dispostivo Móvel')),
 
-      body: Container(
-        height: 50,
-        width: 50,
-        color: Colors.red,
-      ),
+      body: container,
       // passando botao
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add_circle),
