@@ -10,26 +10,20 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   int counter = 0;
+  bool isDarkTheme = false;
   @override
   Widget build(BuildContext context) {
     // podemos usar Scaffold ou material
-    var container = Container(
-      height: 250,
-      width: 250,
-      color: Colors.red,
-      //testando filho
-      child: Center(
-        child: Container(
-          height: 150,
-          width: 150,
-          color: Colors.green,
-        ),
-      ),
-    );
+
     return Scaffold(
       appBar: AppBar(title: Text('Aula Dispostivo Móvel')),
 
-      body: container,
+      body: Center(
+          child: Switch(
+              value: isDarkTheme,
+              onChanged: (value) {
+                print(value);
+              })),
       // passando botao
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add_circle),
