@@ -22,7 +22,9 @@ class HomePageState extends State<HomePage> {
           child: Switch(
               value: isDarkTheme,
               onChanged: (value) {
-                print(value);
+                setState(() {
+                  isDarkTheme = value;
+                });
               })),
       // passando botao
       floatingActionButton: FloatingActionButton(
