@@ -18,10 +18,13 @@ class HomePageState extends State<HomePage> {
       width: 250,
       color: Colors.red,
       //testando filho
-      child: Container(
-        height: 250,
-        width: 250,
-        color: Colors.black87,
+      child: Align(
+        alignment: Alignment.center,
+        child: Container(
+          height: 150,
+          width: 150,
+          color: Colors.green,
+        ),
       ),
     );
     return Scaffold(
