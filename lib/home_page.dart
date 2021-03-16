@@ -17,7 +17,10 @@ class HomePageState extends State<HomePage> {
     // podemos usar Scaffold ou material
 
     return Scaffold(
-      appBar: AppBar(title: Text('Aula Dispostivo Móvel')),
+      appBar: AppBar(
+        title: Text('Aula Dispostivo Móvel'),
+        actions: [CustomSwitch()],
+      ),
 
       body: Center(child: CustomSwitch()),
       // passando botao
