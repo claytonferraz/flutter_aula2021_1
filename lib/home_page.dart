@@ -1,6 +1,8 @@
 // sempre se cria uma classe que vai dentro da classe StateFul
 import 'package:flutter/material.dart';
 
+import 'app_controller.dart';
+
 class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() {
@@ -10,7 +12,6 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   int counter = 0;
-  bool isDarkTheme = false;
   @override
   Widget build(BuildContext context) {
     // podemos usar Scaffold ou material
@@ -20,11 +21,9 @@ class HomePageState extends State<HomePage> {
 
       body: Center(
           child: Switch(
-              value: isDarkTheme,
+              value: AppController.instance.isDarkTheme,
               onChanged: (value) {
-                setState(() {
-                  isDarkTheme = value;
-                });
+                AppController.instance.changeTheme();
               })),
       // passando botao
       floatingActionButton: FloatingActionButton(
