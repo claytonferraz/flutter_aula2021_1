@@ -16,22 +16,18 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(title: Text('Aula Dispostivo Móvel')),
 
-      body: Center(
-          child: GestureDetector(
-              child: Text('Click: $counter', style: TextStyle(fontSize: 34)),
-              onTap: () {
-                // ao colocar o setState vai mudar o estado
-                setState(() {
-                  counter++;
-                });
-              })),
+      body: Container(
+        height: 50,
+        width: 50,
+        color: Colors.red,
+      ),
       // passando botao
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add_circle),
         //vamos passar a funcao contar
         onPressed: () {
           setState(() {
-            counter--;
+            counter++;
           });
         },
       ),
