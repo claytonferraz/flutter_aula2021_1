@@ -27,52 +27,8 @@ class HomePageState extends State<HomePage> {
         width: double.infinity,
         height: double.infinity,
         child: ListView(
-          // scrollDirection: Axis.horizontal,
-          scrollDirection: Axis.vertical,
           children: [
             Text('Contador: $counter'),
-            Container(
-              height: 50,
-            ),
-            Container(
-              height: 50,
-            ),
-            Container(
-              height: 50,
-            ),
-            Container(
-              height: 50,
-            ),
-            Container(
-              height: 50,
-            ),
-            Container(
-              height: 50,
-            ),
-            Container(
-              height: 50,
-            ),
-            Container(
-              height: 50,
-            ),
-            Container(
-              height: 50,
-            ),
-            Container(
-              height: 50,
-            ),
-            Container(
-              height: 50,
-            ),
-            Container(
-              height: 50,
-            ),
-            Container(
-              height: 50,
-            ),
-            Container(
-              height: 50,
-            ),
             Container(
               height: 50,
             ),

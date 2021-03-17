@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // import a nova class gerada
 import 'app_controller.dart';
 import 'home_page.dart';
+import 'login_page.dart';
 
 // fazer os imports
 
@@ -20,7 +21,7 @@ class AppWidget extends StatelessWidget {
                 ? Brightness.dark
                 : Brightness.light,
           ),
-          home: HomePage(),
+          home: LoginPage(),
         );
       },
     );
