@@ -22,7 +22,16 @@ class HomePageState extends State<HomePage> {
         actions: [CustomSwitch()],
       ),
 
-      body: Center(child: CustomSwitch()),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          children: [
+            Text('Contador: $counter'),
+            CustomSwitch(),
+          ],
+        ),
+      ),
       // passando botao
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add_circle),
