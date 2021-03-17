@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   int counter = 0;
+  String nome = 'Colors.green';
   @override
   Widget build(BuildContext context) {
     // podemos usar Scaffold ou material
@@ -30,7 +31,34 @@ class HomePageState extends State<HomePage> {
           // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Contador: $counter'),
+            Container(
+              height: 50,
+            ),
             CustomSwitch(),
+            Container(
+              height: 50,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.black,
+                ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.green,
+                ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.black,
+                ),
+              ],
+            ),
           ],
         ),
       ),
