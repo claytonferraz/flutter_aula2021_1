@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'home_page.dart';
-
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -22,6 +20,8 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Image.network(
+                    'https://img.icons8.com/cute-clipart/64/000000/login-rounded-right.png'),
                 TextField(
                   onChanged: (text) => email = text,
                   keyboardType: TextInputType.emailAddress,
