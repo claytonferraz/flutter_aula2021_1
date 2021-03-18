@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home_page.dart';
+
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -46,6 +48,11 @@ class _LoginPageState extends State<LoginPage> {
                     onPressed: () {
                       if (email == 'clayton@gmail.com' && senha == '123') {
                         print('passou');
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => HomePage()),
+                        );
+                      } else {
+                        print('Login Errado');
                       }
                     },
                     child: Text('Login')),
