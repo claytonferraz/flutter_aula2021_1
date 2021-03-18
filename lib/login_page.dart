@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                     onPressed: () {
                       if (email == 'clayton@gmail.com' && senha == '123') {
                         print('passou');
-                        Navigator.of(context).push(
+                        Navigator.of(context).pushReplacement(
                           MaterialPageRoute(builder: (context) => HomePage()),
                         );
                       } else {
