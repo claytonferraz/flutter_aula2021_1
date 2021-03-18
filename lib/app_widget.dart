@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 // import a nova class gerada
 import 'app_controller.dart';
@@ -21,7 +22,11 @@ class AppWidget extends StatelessWidget {
                 ? Brightness.dark
                 : Brightness.light,
           ),
-          home: LoginPage(),
+          initialRoute: '/',
+          routes: {
+            '/': (context) => LoginPage(),
+            '/home': (context) => HomePage(),
+          },
         );
       },
     );
