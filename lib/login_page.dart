@@ -20,13 +20,20 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.network(
-                    'https://img.icons8.com/cute-clipart/64/000000/login-rounded-right.png'),
+                Container(
+                  width: 90,
+                  height: 50,
+                  child: Image.network(
+                      'https://img.icons8.com/cute-clipart/64/000000/login-rounded-right.png'),
+                ),
+                Container(
+                  height: 40,
+                ),
                 TextField(
                   onChanged: (text) => email = text,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
-                    labelText: 'Email',
+                    labelText: 'Email User',
                     border: OutlineInputBorder(),
                   ),
                 ),
