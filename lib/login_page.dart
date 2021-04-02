@@ -29,38 +29,50 @@ class _LoginPageState extends State<LoginPage> {
                   Container(
                     height: 40,
                   ),
-                  TextField(
-                    onChanged: (text) => email = text,
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      labelText: 'Email User',
-                      border: OutlineInputBorder(),
+                  Card(
+                    child: Padding(
+                      //padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.only(
+                          left: 12, right: 12, top: 20, bottom: 12),
+
+                      child: Column(
+                        children: [
+                          TextField(
+                            onChanged: (text) => email = text,
+                            keyboardType: TextInputType.emailAddress,
+                            decoration: InputDecoration(
+                              labelText: 'Email User',
+                              border: OutlineInputBorder(),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          TextField(
+                            onChanged: (text) => senha = text,
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              labelText: 'Senha',
+                              border: OutlineInputBorder(),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  TextField(
-                    onChanged: (text) => senha = text,
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      labelText: 'Senha',
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
                   ),
                   ElevatedButton(
-                      onPressed: () {
-                        if (email == 'clayton@gmail.com' && senha == '123') {
-                          print('passou');
-                          Navigator.of(context).pushNamed('/home');
-                        } else {
-                          print('Login Errado');
-                        }
-                      },
-                      child: Text('Login')),
+                    onPressed: () {
+                      if (email == 'clayton@gmail.com' && senha == '123') {
+                        print('passou');
+                        Navigator.of(context).pushNamed('/home');
+                      } else {
+                        print('Login Errado');
+                      }
+                    },
+                    child: Container(
+                      child: Text('Login'),
+                    ),
+                  )
                 ],
               ),
             ),
@@ -82,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                 'assets/images/Night.png',
                 fit: BoxFit.cover,
               )),
-          Container(color: Colors.black.withOpacity(0.05)),
+          Container(color: Colors.black.withOpacity(0.36)),
           _body(),
         ],
       ),
