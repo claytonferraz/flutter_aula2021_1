@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ola_mundo/perfil_page.dart';
 // import a nova class gerada
 import 'app_controller.dart';
 import 'home_page.dart';
@@ -25,6 +26,7 @@ class AppWidget extends StatelessWidget {
           routes: {
             '/': (context) => LoginPage(),
             '/home': (context) => HomePage(),
+            '/perfil': (context) => PerfilPage(),
           },
         );
       },
