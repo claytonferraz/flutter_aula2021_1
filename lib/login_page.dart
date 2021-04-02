@@ -23,8 +23,7 @@ class _LoginPageState extends State<LoginPage> {
                 Container(
                   width: 90,
                   height: 50,
-                  child: Image.network(
-                      'https://img.icons8.com/cute-clipart/64/000000/login-rounded-right.png'),
+                  child: Image.asset('assets/images/logo.png'),
                 ),
                 Container(
                   height: 40,
