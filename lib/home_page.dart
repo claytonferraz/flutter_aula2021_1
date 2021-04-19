@@ -72,6 +72,7 @@ class HomePageState extends State<HomePage> {
         onPressed: () {
           setState(() {
             counter++;
+            Navigator.of(context).pushNamed('/perfil');
           });
         },
       ),

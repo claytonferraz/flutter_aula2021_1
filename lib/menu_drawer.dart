@@ -9,7 +9,7 @@ class MenuDrawer extends StatelessWidget {
           UserAccountsDrawerHeader(
             // ClipOval(child: ...)
             currentAccountPicture: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Image.network(
                   'https://avatars.githubusercontent.com/u/6089305?v=4'),
             ),
